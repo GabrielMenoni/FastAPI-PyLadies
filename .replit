@@ -1,0 +1,13 @@
+modules = ["python-3.10"]
+run = "python -m fastapi dev mulheres_cientistas_api/main.py"
+
+[nix]
+channel = "stable-24_05"
+
+[deployment]
+run = ["sh", "-c", "python -m fastapi dev mulheres_cientistas_api/main.py"]
+
+[[ports]]
+localPort = 8000
+externalPort = 8000
+exposeLocalhost = true
